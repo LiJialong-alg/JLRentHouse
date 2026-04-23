@@ -1,0 +1,29 @@
+# 前端项目
+/rentHouseApp/
+/rentHouseWeb/
+/rentHouseAdmin/
+
+# IDE
+.idea/
+*.iml
+*.iws
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment variables
+.env
+.env.local
+.env.*.local
