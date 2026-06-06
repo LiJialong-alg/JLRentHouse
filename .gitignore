@@ -1,7 +1,7 @@
-# 前端项目
-/rentHouseApp/
-/rentHouseWeb/
-/rentHouseAdmin/
+# 前端项目（旧目录结构，已迁移到delivery-package）
+# /rentHouseApp/
+# /rentHouseWeb/
+# /rentHouseAdmin/
 
 # IDE
 .idea/
