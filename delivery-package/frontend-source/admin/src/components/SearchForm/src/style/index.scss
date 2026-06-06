@@ -1,0 +1,74 @@
+.table-search {
+  padding-bottom: 0 !important;
+  margin-bottom: $base-padding;
+  background: #ffffff;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+  box-shadow: $base-box-shadow;
+  border: none;
+
+  :deep(.el-form) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  :deep(.el-form-item) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  :deep(.el-form-item__label) {
+    color: #2C5AA0;
+    font-weight: 500;
+    padding-right: 8px;
+    margin-bottom: 0;
+    line-height: 36px;
+    white-space: nowrap;
+  }
+
+  :deep(.el-form-item__content) {
+    flex: 1;
+    min-width: 150px;
+    line-height: 36px;
+  }
+
+  :deep(.el-input),
+  :deep(.el-select),
+  :deep(.el-date-editor) {
+    width: 100%;
+  }
+
+  :deep(.el-input .el-input__inner),
+  :deep(.el-select .el-select__input) {
+    border-radius: $base-border-radius-sm;
+    border-color: $base-color-gray-border;
+    height: 36px;
+    line-height: 36px;
+    transition: all 0.3s ease;
+  }
+
+  :deep(.el-input .el-input__inner:focus),
+  :deep(.el-select.is-focused .el-select__input) {
+    border-color: $base-color-primary;
+    box-shadow: 0 0 0 3px rgba(91, 155, 213, 0.1);
+  }
+
+  :deep(.el-select .el-input__inner) {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .operation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-top: 0;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

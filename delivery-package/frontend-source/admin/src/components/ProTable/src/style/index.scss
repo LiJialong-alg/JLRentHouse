@@ -1,0 +1,59 @@
+.card {
+  padding: $base-padding;
+  background-color: #ffffff;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
+  border: none;
+
+  .table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $base-padding;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $base-color-gray-border;
+
+    :deep(.el-icon) {
+      margin-left: 12px;
+      cursor: pointer;
+      color: #718096;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $base-color-primary;
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $base-padding;
+    padding-top: 16px;
+    border-top: 1px solid $base-color-gray-border;
+  }
+
+  .table-empty {
+    padding: 60px 20px;
+    text-align: center;
+    color: #718096;
+
+    .empty-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
+      opacity: 0.5;
+    }
+
+    .empty-text {
+      font-size: 14px;
+    }
+  }
+}

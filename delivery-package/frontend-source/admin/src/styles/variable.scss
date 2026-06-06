@@ -1,0 +1,79 @@
+$base-color-primary: #5B9BD5;
+$base-color-primary-light: #E8F4FC;
+$base-color-primary-dark: #2C5AA0;
+$base-color-primary-hover: #4A8AC9;
+
+$base-color-default: $base-color-primary;
+
+$base-z-index: 999;
+
+$base-menu-background: linear-gradient(135deg, #1E3A5F 0%, #2D5A87 100%);
+$base-menu-background-light: #F8FBFF;
+
+$base-menu-color: rgba(255, 255, 255, 0.9);
+$base-menu-color-light: #333333;
+
+$base-menu-color-active: #ffffff;
+$base-menu-color-active-light: $base-color-primary;
+
+$base-menu-background-active: rgba(91, 155, 213, 0.3);
+$base-color-blue: $base-color-primary;
+
+$base-title-color: #ffffff;
+$base-title-color-light: #2C5AA0;
+
+$base-font-size-small: 12px;
+$base-font-size-default: 14px;
+$base-font-size-big: 16px;
+$base-font-size-bigger: 18px;
+$base-font-size-max: 22px;
+$base-font-color: #4A5568;
+$base-font-color-light: #718096;
+
+$base-color-green: #48BB78;
+$base-color-white: #ffffff;
+$base-color-black: #1A202C;
+$base-color-yellow: #ED8936;
+$base-color-orange: #F56565;
+$base-color-red: #E53E3E;
+$base-color-gray: rgba(0, 0, 0, 0.5);
+$base-color-gray-light: #F7FAFC;
+$base-color-gray-border: #E2E8F0;
+
+$base-main-width: 1279px;
+$base-border-radius: 8px;
+$base-border-radius-sm: 4px;
+$base-border-radius-lg: 12px;
+$base-border-color: #E2E8F0;
+
+$base-input-height: 36px;
+
+$base-padding: 20px;
+$base-padding-sm: 12px;
+$base-padding-lg: 24px;
+
+$base-box-shadow: 0 2px 8px rgba(91, 155, 213, 0.1);
+$base-box-shadow-hover: 0 4px 16px rgba(91, 155, 213, 0.15);
+$base-box-shadow-lg: 0 8px 24px rgba(91, 155, 213, 0.12);
+
+$base-top-bar-height: 60px;
+$base-logo-height: 75px;
+$base-nav-bar-height: 60px;
+$base-tabs-bar-height: 55px;
+$base-tag-item-height: 34px;
+$base-menu-item-height: 50px;
+
+$base-header-height: calc(#{$base-nav-bar-height} + #{$base-tabs-bar-height});
+$base-app-footer-height: 55px;
+
+$base-app-main-height: calc(
+  100vh - $base-nav-bar-height - $base-tabs-bar-height - 56px - 40px
+);
+
+$base-left-menu-width: 256px;
+$base-right-content-width: calc(100% - #{$base-left-menu-width});
+$base-left-menu-width-min: 64px;
+$base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
+
+$base-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$base-transition-time: 0.3s;

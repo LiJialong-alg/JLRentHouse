@@ -1,0 +1,2 @@
+redis-server
+minio server D:\\minio

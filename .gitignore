@@ -27,3 +27,24 @@ logs
 .env
 .env.local
 .env.*.local
+
+# Java/Maven build
+target/
+*.jar
+*.war
+
+# Node
+node_modules/
+package-lock.json
+
+# Uploads
+.uploads/
+
+# IDE - VSCode
+.vscode/
+.husky/
+.continue/
+
+# Maven wrapper
+.mvn/
+

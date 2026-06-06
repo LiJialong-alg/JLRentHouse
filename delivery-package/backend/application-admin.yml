@@ -1,0 +1,76 @@
+# ============================================================
+# 租房管理系统 - 管理后台配置文件 (application-admin.yml)
+# 此文件需与 web-admin.jar 放在同一目录下启动时自动加载
+# 启动命令: java -jar web-admin.jar --spring.config.additional-location=配置文件/application-admin.yml
+# ============================================================
+
+server:
+  port: 8080                       # 管理后台API端口
+  servlet:
+    context-path: /api              # API路径前缀
+
+spring:
+  application:
+    name: lease-admin
+
+  servlet:
+    multipart:
+      max-file-size: 10MB           # 上传文件最大大小
+      max-request-size: 10MB        # 请求最大大小
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
+    username: root                  # 数据库用户名（按实际修改）
+    password: 123456                # 数据库密码（按实际修改）
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 500000
+      max-lifetime: 540000
+      maximum-pool-size: 12
+      minimum-idle: 10
+      pool-name: AdminHikariPool
+
+  jackson:
+    time-zone: GMT+8
+
+  data:
+    redis:
+      host: 127.0.0.1              # Redis主机地址
+      port: 6379                    # Redis端口
+      database: 0                   # Redis数据库编号
+      timeout: 60000
+      jedis:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # SQL日志输出
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+minio:
+  endpoint: http://127.0.0.1:9000  # MinIO服务地址
+  access-key: minioadmin            # MinIO访问密钥
+  secret-key: minioadmin            # MinIO秘密密钥
+  bucket-name: lease                # MinIO桶名称
+  external-url: http://127.0.0.1:9000  # 外部访问地址
+
+springdoc:
+  default-flat-param-object: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.example: DEBUG
+  file:
+    name: logs/admin.log
+    max-size: 10MB
+    max-history: 30

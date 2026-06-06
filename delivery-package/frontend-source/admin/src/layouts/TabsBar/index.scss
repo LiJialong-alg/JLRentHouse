@@ -1,0 +1,102 @@
+.tabs-action {
+  padding-bottom: 5px;
+  cursor: pointer;
+
+  :deep(.el-icon) {
+    transition: all 0.3s ease;
+    color: #718096;
+  }
+
+  :deep(.el-icon):hover {
+    color: $base-color-primary;
+    transition: all 0.3s ease;
+    transform: rotate(90deg);
+  }
+}
+
+.tabs-bar-container {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: $base-tabs-bar-height;
+  padding-right: $base-padding;
+  padding-left: $base-padding;
+  user-select: none;
+  background: #ffffff;
+  border-top: 1px solid $base-color-gray-border;
+
+  .tabs-content {
+    width: calc(100% - 0px);
+  }
+
+  :deep(.el-tabs--card) {
+    height: $base-tag-item-height;
+
+    .el-tabs__nav-next,
+    .el-tabs__nav-prev {
+      height: $base-tag-item-height;
+      line-height: $base-tag-item-height;
+      color: #718096;
+
+      &:hover {
+        color: $base-color-primary;
+      }
+    }
+
+    .el-tabs__header {
+      margin: 0;
+      border-bottom: 0;
+    }
+
+    .el-tabs__nav {
+      border: 0;
+    }
+
+    .tabs-icon {
+      top: 0;
+      font-size: 14px;
+      margin-right: 6px;
+    }
+
+    .el-tabs__item {
+      box-sizing: border-box;
+      height: $base-tag-item-height;
+      line-height: $base-tag-item-height;
+      border: none;
+      border-radius: $base-border-radius-sm;
+      margin-right: 8px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #718096;
+      transition: all 0.2s ease;
+      background: transparent;
+    }
+
+    .el-tabs__item.is-active {
+      background: linear-gradient(135deg, rgba(91, 155, 213, 0.15) 0%, rgba(91, 155, 213, 0.08) 100%);
+      color: #2C5AA0;
+      box-shadow: 0 2px 8px rgba(91, 155, 213, 0.1);
+    }
+
+    .el-tabs__item:not(.is_active):hover {
+      background: rgba(91, 155, 213, 0.05);
+      color: $base-color-primary;
+    }
+
+    .el-tabs__close {
+      margin-left: 8px;
+      padding: 2px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(229, 62, 62, 0.1);
+        color: #E53E3E;
+      }
+    }
+  }
+}
