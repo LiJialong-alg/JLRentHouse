@@ -1,10 +1,3 @@
-/*
- * @Author: 朽木白
- * @Date: 2023-02-06 11:02:58
- * @LastEditors: 1547702880@@qq.com
- * @LastEditTime: 2023-03-10 15:22:05
- * @Description: 用户store
- */
 import { defineStore } from 'pinia'
 import { getUserInfo } from '@/api/user'
 import type { UserState } from './model/userModel'

@@ -119,7 +119,6 @@ export default defineComponent({
 
     /**
      * @description: 拿到需要固定的路由表，添加进 store
-     * @author: codeBo
      */
     const initTags = () => {
       let routesNew = routes as RouteRecordRaw[]
